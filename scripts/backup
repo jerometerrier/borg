@@ -1,0 +1,11 @@
+#/bin/bash
+
+#sauvegarde
+
+docker run --rm -it --name borg \
+  -e BORG_PASSPHRASE=toto \
+  -v /home/jerome/Téléchargements/test_sauvegarde:/sauvegarde \
+  -v /home/jerome/Images/:/source:ro \
+  registry.gitlab.com/epicdocker/borgbackup:stable \
+  create /sauvegarde::{hostname}_{now:%d.%m.%Y} /source --stats
+

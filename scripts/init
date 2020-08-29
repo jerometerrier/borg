@@ -1,0 +1,7 @@
+#/bin/bash
+
+docker run --rm -it --name borg \
+  -v /home/jerome/Téléchargements/test_sauvegarde:/sauvegarde \
+  -v /home/jerome/Images/:/source:ro \
+  registry.gitlab.com/epicdocker/borgbackup:stable \
+  init --encryption=repokey /sauvegarde

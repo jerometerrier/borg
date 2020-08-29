@@ -1,0 +1,12 @@
+#/bin/bash
+
+#restore un backup
+
+docker run --rm -it --name borg \
+  -e BORG_PASSPHRASE=toto \
+  -v /home/jerome/Téléchargements/test_sauvegarde:/sauvegarde \
+  -v /home/jerome/Téléchargements/test_restore:/restore \
+  -v /home/jerome/Documents/Data/TiTouNe/DevOps/borg:/script
+  registry.gitlab.com/epicdocker/borgbackup:stable \
+  extract /sauvegarde::4fcaff2f0047_19.07.2020 /restore
+
