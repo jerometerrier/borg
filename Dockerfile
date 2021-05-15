@@ -1,9 +1,11 @@
 FROM debian:latest
-LABEL Name=borg Version=0.0.1
+LABEL name=borg Version=3
+LABEL maintainer="jerome+dev@jelosat.com"
+LABEL build_date ="2021/05/15"
 RUN apt-get update && apt-get install -y\
     borgbackup \
+    sshfs \
+    openvpn \
     && rm -rf /var/lib/apt/lists/*
-VOLUME [ "/script" ]
-ENTRYPOINT ["/script/run.sh"]
 
  

@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../run/user/1000/gvfs/sftp:host=192.168.1.2,user=jerome/share/Sauvegarde"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../../../../../run/user/1000/gvfs/sftp:host=192.168.1.2,user=jerome/share"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.yaml": "home-assistant"
+		}
+	}
+}
